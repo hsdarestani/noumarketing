@@ -1,0 +1,46 @@
+.ticker { background:var(--forest); color:var(--paper); overflow:hidden; padding:14px 0; border-block:1px solid rgba(255,255,255,.08); }
+.ticker-track { width:max-content; display:flex; align-items:center; gap:28px; animation:marquee 26s linear infinite; font:500 12px "Manrope"; letter-spacing:.15em; }
+.ticker i { color:var(--acid); font-style:normal; font-size:9px; }
+@keyframes marquee { to { transform:translateX(-50%); } }
+
+.manifesto { background:var(--forest); color:var(--paper); padding-top:120px; padding-bottom:140px; }
+.section-index { font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.62; }
+.manifesto-layout { display:grid; grid-template-columns:.55fr 2fr .8fr; gap:clamp(26px, 4vw, 70px); align-items:start; margin-top:72px; }
+.manifesto-small { font-size:14px; line-height:1.5; margin:7px 0 0; opacity:.75; max-width:22ch; }
+.manifesto-big { margin:0; font:500 clamp(44px, 6.2vw, 105px)/.95 "Manrope"; letter-spacing:-.065em; }
+.manifesto-big em { font-weight:400; color:var(--acid); font-style:italic; }
+.manifesto-copy { font-size:16px; line-height:1.6; opacity:.85; padding-top:12px; }
+.manifesto-copy p { margin:0 0 24px; }
+
+.work { padding-top:120px; padding-bottom:130px; background:var(--paper); }
+.section-head { display:grid; grid-template-columns:1fr 2.2fr; gap:40px; align-items:start; margin-bottom:72px; }
+.section-title { margin:0; font:500 clamp(46px, 6vw, 96px)/.92 "Manrope"; letter-spacing:-.065em; }
+.section-title span { color:var(--forest); }
+.work-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; }
+.project { min-height:520px; padding:18px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; position:relative; transition:transform .35s cubic-bezier(.2,.8,.2,1); }
+.project:hover { transform:translateY(-5px); }
+.project-a { grid-column:1 / span 7; background:#d7ddba; }
+.project-b { grid-column:8 / span 5; background:#151915; color:#f5f3ed; }
+.project-c { grid-column:1 / span 4; background:#d9c9ba; }
+.project-d { grid-column:5 / span 8; background:#ffe16a; }
+.project-e { grid-column:3 / span 8; background:#d7d9df; }
+.project-top, .project-bottom { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; font-size:10px; letter-spacing:.12em; text-transform:uppercase; position:relative; z-index:2; }
+.project-bottom { align-items:flex-end; }
+.project-bottom strong { font:500 clamp(20px,2vw,30px)/1.06 "Manrope"; letter-spacing:-.04em; text-transform:none; max-width:20ch; }
+.project-bottom span { white-space:nowrap; opacity:.72; }
+.project-art { flex:1; display:flex; align-items:center; justify-content:center; position:relative; font-family:"Manrope"; }
+.art-palm b { font-size:clamp(120px,18vw,270px); letter-spacing:-.12em; color:var(--forest); }
+.art-palm i { position:absolute; font-style:normal; background:var(--forest); color:var(--acid); width:90px; height:90px; display:grid; place-items:center; border-radius:50%; font-size:20px; right:16%; top:20%; }
+.art-prime { flex-direction:column; gap:0; }
+.art-prime b { font-size:clamp(130px,15vw,235px); line-height:.72; color:var(--acid); letter-spacing:-.12em; }
+.art-prime span { font-size:12px; letter-spacing:.35em; }
+.art-n39 { flex-direction:column; line-height:.8; }
+.art-n39 > span:first-child { font-size:24px; }
+.art-n39 b { font-size:clamp(120px,15vw,230px); letter-spacing:-.1em; color:#5f201d; }
+.art-n39 > span:last-child { font-size:10px; letter-spacing:.28em; }
+.art-cheese { gap:14px; transform:rotate(-5deg); }
+.art-cheese b { font-size:clamp(64px,10vw,170px); letter-spacing:-.09em; color:#692826; }
+.art-cheese span { font-size:14px; border:1px solid currentColor; border-radius:999px; padding:7px 11px; }
+.art-llyn { gap:10px; }
+.art-llyn span { font-size:clamp(60px,8vw,120px); letter-spacing:-.08em; }
+.art-llyn b { font-size:clamp(80px,12vw,170px); font-weight:400; color:#584482; }
