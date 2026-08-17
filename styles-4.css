@@ -1,0 +1,85 @@
+.hero-with-photo { overflow:hidden; }
+.hero-photo-grid { align-items:stretch; }
+.hero-photo-stack { position:relative; min-height:620px; display:flex; align-items:flex-end; justify-content:flex-end; }
+.hero-photo { margin:0; overflow:hidden; background:var(--forest); }
+.hero-photo-main { width:min(100%,520px); height:78%; border-radius:180px 180px 28px 28px; transform:rotate(1.5deg); box-shadow:0 30px 90px rgba(38,59,49,.16); }
+.hero-photo img, .manifesto-image img, .case-image img, .about-visual img { width:100%; height:100%; object-fit:cover; display:block; }
+.social-stamp { position:absolute; left:2%; bottom:8%; width:138px; height:138px; border-radius:50%; background:var(--acid); color:var(--ink); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; transform:rotate(-7deg); box-shadow:0 16px 50px rgba(0,0,0,.14); }
+.social-stamp span { font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
+.social-stamp strong { font:600 31px "Manrope"; letter-spacing:-.06em; margin:4px 0 0; }
+.social-stamp small { font-size:10px; opacity:.65; }
+.hero-photo-stack .opinion-chip { left:auto; right:4%; top:6%; z-index:3; }
+
+.manifesto-with-image { grid-template-columns:.45fr 1.15fr .9fr; align-items:stretch; }
+.manifesto-source-copy { margin-top:30px; max-width:58ch; }
+.manifesto-image { margin:0; min-height:520px; overflow:hidden; border-radius:999px 999px 24px 24px; }
+.manifesto-image img { filter:saturate(.78) contrast(1.02); }
+
+.editorial-work-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; }
+.case-card { position:relative; overflow:hidden; background:#e9e5db; min-height:620px; display:flex; flex-direction:column; }
+.case-wide { grid-column:1 / span 7; }
+.case-tall { grid-column:8 / span 5; }
+.case-card:nth-child(3) { grid-column:2 / span 5; margin-top:58px; }
+.case-dark { background:var(--forest); color:var(--paper); }
+.case-image { min-height:420px; flex:1; overflow:hidden; }
+.case-image img { transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s; }
+.case-card:hover .case-image img { transform:scale(1.035); }
+.case-copy { padding:24px; }
+.case-copy > span { display:block; font-size:10px; letter-spacing:.13em; text-transform:uppercase; opacity:.62; margin-bottom:14px; }
+.case-copy h3 { margin:0 0 12px; font:500 clamp(34px,4vw,64px)/.95 "Manrope"; letter-spacing:-.06em; }
+.case-copy p { margin:0; max-width:52ch; line-height:1.55; font-size:14px; opacity:.76; }
+
+.client-roster { margin-top:86px; border-top:1px solid var(--line); }
+.client-roster > span { display:block; padding:22px 0 14px; font-size:10px; letter-spacing:.15em; opacity:.55; }
+.client-name { border-top:1px solid var(--line); padding:18px 0; font:500 clamp(28px,4.4vw,66px)/1 "Manrope"; letter-spacing:-.055em; transition:padding .25s, color .25s; }
+.client-name:last-child { border-bottom:1px solid var(--line); }
+.client-name:hover { padding-left:18px; color:var(--forest); }
+
+.about-deep { background:var(--forest); color:var(--paper); padding-top:120px; padding-bottom:120px; display:grid; grid-template-columns:.92fr 1.08fr; gap:clamp(48px,7vw,110px); align-items:start; }
+.about-visual { position:sticky; top:110px; min-height:720px; border-radius:34px; overflow:hidden; }
+.about-visual img { min-height:720px; filter:saturate(.78); }
+.about-deep-copy h2 { font:500 clamp(56px,6vw,100px)/.92 "Manrope"; letter-spacing:-.065em; margin:42px 0 34px; }
+.about-deep-copy > p { max-width:58ch; font-size:17px; line-height:1.65; opacity:.82; }
+.beliefs { margin-top:58px; border-top:1px solid rgba(255,255,255,.2); }
+.beliefs > div { display:grid; grid-template-columns:52px 1fr; gap:8px 18px; padding:24px 0; border-bottom:1px solid rgba(255,255,255,.2); }
+.beliefs span { color:var(--acid); font-size:11px; }
+.beliefs strong { font:500 25px "Manrope"; letter-spacing:-.04em; }
+.beliefs p { grid-column:2; margin:0; opacity:.68; line-height:1.5; }
+.founder-note { margin-top:44px !important; padding-top:24px; border-top:1px solid rgba(255,255,255,.2); }
+
+.proof-photo-card { background:#d7ddba; }
+
+@media (max-width:1080px) {
+  .hero-photo-stack { min-height:520px; max-width:660px; margin-left:auto; width:100%; }
+  .hero-photo-main { width:78%; height:100%; }
+  .manifesto-with-image { grid-template-columns:1fr 1.6fr; }
+  .manifesto-image { grid-column:2; min-height:460px; }
+  .editorial-work-grid { grid-template-columns:1fr 1fr; }
+  .case-wide, .case-tall, .case-card:nth-child(3) { grid-column:auto; margin-top:0; }
+  .case-card:nth-child(3) { grid-column:1 / -1; }
+  .about-deep { grid-template-columns:1fr; }
+  .about-visual { position:relative; top:auto; min-height:520px; }
+  .about-visual img { min-height:520px; }
+}
+
+@media (max-width:760px) {
+  .hero-photo-stack { min-height:430px; justify-content:center; margin-top:16px; }
+  .hero-photo-main { width:86%; height:400px; border-radius:130px 130px 24px 24px; }
+  .social-stamp { width:112px; height:112px; left:0; bottom:3%; }
+  .social-stamp strong { font-size:25px; }
+  .hero-photo-stack .opinion-chip { right:0; top:1%; }
+  .manifesto-with-image { grid-template-columns:1fr; }
+  .manifesto-image { grid-column:auto; min-height:390px; border-radius:130px 130px 20px 20px; }
+  .editorial-work-grid { display:flex; flex-direction:column; gap:14px; }
+  .case-card { min-height:auto; }
+  .case-image { min-height:360px; }
+  .case-copy { padding:20px; }
+  .client-roster { margin-top:56px; }
+  .client-name { font-size:clamp(30px,10vw,48px); padding:16px 0; }
+  .about-deep { padding-top:82px; padding-bottom:88px; }
+  .about-visual, .about-visual img { min-height:410px; }
+  .about-deep-copy h2 { font-size:clamp(52px,14vw,80px); }
+  .about-deep-copy > p { font-size:15px; }
+  .beliefs > div { grid-template-columns:40px 1fr; }
+  .beliefs strong { font-size:22px; }
+}
