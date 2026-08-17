@@ -83,3 +83,50 @@
   .beliefs > div { grid-template-columns:40px 1fr; }
   .beliefs strong { font-size:22px; }
 }
+
+/* Mobile type safety: keep every display title inside the viewport without clipping. */
+@media (max-width:760px) {
+  html, body { max-width:100%; overflow-x:clip; }
+  main, section, .hero-grid, .hero-copy, .manifesto-layout, .section-head,
+  .process-grid, .contact-grid, .contact-main, .about-deep-copy,
+  .case-card, .case-copy, .proof-card, .proof-left, .proof-right { min-width:0; max-width:100%; }
+
+  .hero-title,
+  .manifesto-big,
+  .section-title,
+  .process-intro h2,
+  .about-deep-copy h2,
+  .contact-main h2,
+  .case-copy h3,
+  .client-name {
+    max-width:100%;
+    word-break:normal;
+    overflow-wrap:normal;
+    text-wrap:balance;
+  }
+
+  .hero-title { font-size:clamp(44px,14vw,66px); line-height:.88; }
+  .manifesto-big { font-size:clamp(38px,11.5vw,56px); line-height:.98; }
+  .section-title { font-size:clamp(38px,11.5vw,56px); line-height:.96; }
+  .process-intro h2 { font-size:clamp(40px,11.8vw,58px); line-height:.95; }
+  .about-deep-copy h2 { font-size:clamp(38px,11.2vw,56px); line-height:.96; }
+  .case-copy h3 { font-size:clamp(30px,9vw,44px); }
+  .client-name { font-size:clamp(27px,8.8vw,42px); }
+
+  .contact-main h2 {
+    font-size:clamp(36px,12vw,58px);
+    line-height:.9;
+    letter-spacing:-.065em;
+    margin:38px 0;
+  }
+  .contact-main h2 em { display:block; font-size:.94em; letter-spacing:-.07em; }
+}
+
+@media (max-width:360px) {
+  .hero-title { font-size:13.2vw; }
+  .manifesto-big, .section-title { font-size:10.8vw; }
+  .process-intro h2, .about-deep-copy h2 { font-size:10.8vw; }
+  .contact-main h2 { font-size:11.4vw; }
+  .case-copy h3 { font-size:8.8vw; }
+  .client-name { font-size:8.4vw; }
+}
